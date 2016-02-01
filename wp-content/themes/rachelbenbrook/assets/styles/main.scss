@@ -1,0 +1,113 @@
+@import "common/_variables";
+// Automatically injected Bower dependencies via wiredep (never manually edit this block)
+// bower:scss
+@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+@import "common/_global";
+@import "components/_buttons";
+@import "components/_comments";
+@import "components/_forms";
+@import "components/_grid";
+@import "components/_wp-classes";
+@import "layouts/_header";
+@import "layouts/_sidebar";
+@import "layouts/_footer";
+@import "layouts/_pages";
+@import "layouts/_posts";
+
+@font-face {
+  font-family: 'rawengulkregular';
+  src: url(../../assets/fonts/rawengulkregular-webfont.eot);
+  src: url(../../assets/fonts/rawengulkregular-webfont.eot?#iefix) format('embedded-opentype'), url(../../assets/fonts/rawengulkregular-webfont.woff2) format('woff2'), url(../../assets/fonts/rawengulkregular-webfont.woff) format('woff'), url(../../assets/fonts/rawengulkregular-webfont.ttf) format('truetype'), url(../../assets/fonts/rawengulkregular-webfont.svg#rawengulkregular) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$rawengulk: 'rawengulkregular';
+
+body.page {
+  overflow-x: hidden;
+  background: url(../../assets/images/background.png) top left no-repeat;
+  font-family: $rawengulk;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: .5px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+  color: #000;
+}
+
+a {
+  transition: all .3s ease;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+.menu, .menu ul {
+  list-style-type: none;
+  padding-left: 20px;
+  text-transform: uppercase;
+  li {
+    a {
+      color: #000;
+      font-size: 22px;
+      &:hover {
+        text-decoration: none;
+        opacity: .5;
+      }
+      &:focus {
+        text-decoration: none;
+      }
+    }
+    &.menu-item-has-children {
+      a {
+        &:hover {
+          opacity: 1;
+        }
+      }
+      li a {
+        font-size: 16px;
+        &:hover {
+          opacity: .5;
+        }
+      }
+    }
+    &.current-menu-parent {
+      ul li {
+        a {
+          opacity: 1;
+        }
+        &:not(.current-menu-item) {
+          opacity: .5;
+        }
+      }
+    }
+  }
+}
+
+.portfolio-item {
+  margin-bottom: 30px;
+}
+
+.modal-footer {
+  text-align: center;
+}
+
+.carousel-control.left, .carousel-control.right {
+  background-image: none;
+}
+
+footer {
+  padding: 0 15px;
+}
+
+.logo {
+  margin: 10px auto;
+}
+
+.logo-alt {
+  padding: 30px 15px;
+}
